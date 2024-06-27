@@ -1,16 +1,16 @@
 <!-- eslint-disable vue/no-parsing-error -->
 <script setup lang="ts">
-import { getCharacters, type Character, type Info } from 'rickmortyapi'
-import { ref, watch } from 'vue'
-const characters = ref<Info<Character[]>>()
-const page = ref(1)
+import { useCharacters } from '@/queries/character-queries'
+import { computed } from 'vue'
 
-watch(page, async (page) => {
-  characters.value = (await getCharacters({ page }))?.data
-}, { immediate: true })
+const characters = useCharacters()
+const characterData = computed(() => characters.data.value?.results)
+
+const page = characters.page
 </script>
 
 <template>
+  {{ page }}
   <button @click="page--">
     Prev
   </button>
@@ -20,7 +20,7 @@ watch(page, async (page) => {
   <div class="grid-container">
     <div class="character-list">
       <div
-        v-for="character in characters?.results"
+        v-for="character in characterData"
         :key="character.id"
         class="character-item"
       >
@@ -30,7 +30,7 @@ watch(page, async (page) => {
           class="character-image"
         >
         <h2>{{ character.name }}</h2>
-        <p>{{ character.status }} | {{ character.species }} | # Episodes: {{ character.episode.length }}</p>
+        <p>{{ character.status }} | {{ character.species }} | #Episodes: {{ character.episode.length }}</p>
       </div>
     </div>
   </div>
