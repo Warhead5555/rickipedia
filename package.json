@@ -12,7 +12,12 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@tanstack/vue-query": "^5.48.2",
+    "@ag-grid-community/client-side-row-model": "^32.0.0",
+    "@ag-grid-community/core": "^32.0.0",
+    "@ag-grid-community/styles": "^32.0.0",
+    "@ag-grid-community/vue3": "^32.0.0",
+    "@ag-grid-enterprise/server-side-row-model": "^32.0.0",
+    "@tanstack/vue-query": "^5.49.1",
     "pinia": "^2.1.7",
     "rickmortyapi": "^2.3.0",
     "vue": "^3.4.29",

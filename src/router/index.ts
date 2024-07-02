@@ -6,7 +6,18 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('../views/CharactersView.vue')
+      redirect: '/characters',
+      // component: () => import('../views/CharactersView.vue')
+    },
+    {
+      path: '/ag-grid',
+      name: 'ag-grid',
+      component: () => import('../views/AgGridView.vue')
+    },
+    {
+      path: '/characters',
+      name: 'characters',
+      component: () => import('../views/CharactersGridView.vue')
     }
   ]
 })

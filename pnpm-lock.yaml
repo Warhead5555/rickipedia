@@ -5,9 +5,24 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@ag-grid-community/client-side-row-model':
+    specifier: ^32.0.0
+    version: 32.0.0
+  '@ag-grid-community/core':
+    specifier: ^32.0.0
+    version: 32.0.0
+  '@ag-grid-community/styles':
+    specifier: ^32.0.0
+    version: 32.0.0
+  '@ag-grid-community/vue3':
+    specifier: ^32.0.0
+    version: 32.0.0(typescript@5.4.5)
+  '@ag-grid-enterprise/server-side-row-model':
+    specifier: ^32.0.0
+    version: 32.0.0
   '@tanstack/vue-query':
-    specifier: ^5.48.2
-    version: 5.48.2(vue@3.4.30)
+    specifier: ^5.49.1
+    version: 5.49.1(vue@3.4.30)
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.4.5)(vue@3.4.30)
@@ -66,6 +81,46 @@ devDependencies:
     version: 2.0.22(typescript@5.4.5)
 
 packages:
+
+  /@ag-grid-community/client-side-row-model@32.0.0:
+    resolution: {integrity: sha512-J/soopC8OqAWe5J1nykzY442b5Z8SuTf6ew1RrEjAhSCz1X+kpNxZmLAZlVvigpsWogMeKNhfuO6KNTTHkSTaw==}
+    dependencies:
+      '@ag-grid-community/core': 32.0.0
+      tslib: 2.6.3
+    dev: false
+
+  /@ag-grid-community/core@32.0.0:
+    resolution: {integrity: sha512-xBsDlua2CehOmVIYzaAJtoKjLtbv6o/w2lMwdlllfpZAiqnbJQiLJEARWCOGRn769HUnIWFNtrbzJlbuFj4Usw==}
+    dependencies:
+      ag-charts-types: 10.0.0
+      tslib: 2.6.3
+    dev: false
+
+  /@ag-grid-community/styles@32.0.0:
+    resolution: {integrity: sha512-zhVjY4hzX/E1vdBqnuF3akMamAxgIWK8GHZAvN/xNkoqOYU5r6ErNW+7uS6GxwjjQlawdeK42FNY2ohqDRD1nw==}
+    dev: false
+
+  /@ag-grid-community/vue3@32.0.0(typescript@5.4.5):
+    resolution: {integrity: sha512-o0xXM/2DGJJrN7nAy0+TUelclqya+S2BDjKKWRkvVFL1koSgV3TU5BJq6rgCPBUHN+adEVsGgqLPz/zhbCVEkQ==}
+    dependencies:
+      '@ag-grid-community/core': 32.0.0
+      vue: 3.4.30(typescript@5.4.5)
+    transitivePeerDependencies:
+      - typescript
+    dev: false
+
+  /@ag-grid-enterprise/core@32.0.0:
+    resolution: {integrity: sha512-9tb4OqPQAaTYnkWjpuNvpOodjbPNbI76aVBfpZ843ia3I4tLE35sv3mEjyIYxtS6UzbjelJ/BB6moNl+J3Ftbw==}
+    dependencies:
+      '@ag-grid-community/core': 32.0.0
+    dev: false
+
+  /@ag-grid-enterprise/server-side-row-model@32.0.0:
+    resolution: {integrity: sha512-gwhX4KvlLt9HpHgd9zTcDjCAzAWp43+gxX32QdggPqW9NoyC3Y/2ajRpOCx1XjEKYSfT3BecVyGiz9me4DHVEw==}
+    dependencies:
+      '@ag-grid-community/core': 32.0.0
+      '@ag-grid-enterprise/core': 32.0.0
+    dev: false
 
   /@ampproject/remapping@2.3.0:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -905,12 +960,12 @@ packages:
       remove-accents: 0.5.0
     dev: false
 
-  /@tanstack/query-core@5.48.0:
-    resolution: {integrity: sha512-lZAfPPeVIqXCswE9SSbG33B6/91XOWt/Iq41bFeWb/mnHwQSIfFRbkS4bfs+WhIk9abRArF9Id2fp0Mgo+hq6Q==}
+  /@tanstack/query-core@5.49.1:
+    resolution: {integrity: sha512-JnC9ndmD1KKS01Rt/ovRUB1tmwO7zkyXAyIxN9mznuJrcNtOrkmOnQqdJF2ib9oHzc2VxHomnEG7xyfo54Npkw==}
     dev: false
 
-  /@tanstack/vue-query@5.48.2(vue@3.4.30):
-    resolution: {integrity: sha512-W2ReyrVSdlgWwW5YDvvdXLvrpuGcwJuz4yfS7kp6cU2Augkzznsfj8Eooco4oYo8A+3yhi9jdkRu7Du/xDFRtw==}
+  /@tanstack/vue-query@5.49.1(vue@3.4.30):
+    resolution: {integrity: sha512-/nTqP8PNCRzMcqTGEuFQE3ntUD3A+K05r6Dw/0hNwNS3PLEaKUKlxytmAhIoaoloQwbbAghjLyKRQZ+CMWv90A==}
     peerDependencies:
       '@vue/composition-api': ^1.1.2
       vue: ^2.6.0 || ^3.3.0
@@ -919,7 +974,7 @@ packages:
         optional: true
     dependencies:
       '@tanstack/match-sorter-utils': 8.15.1
-      '@tanstack/query-core': 5.48.0
+      '@tanstack/query-core': 5.49.1
       '@vue/devtools-api': 6.6.3
       vue: 3.4.30(typescript@5.4.5)
       vue-demi: 0.14.8(vue@3.4.30)
@@ -1300,6 +1355,10 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
+
+  /ag-charts-types@10.0.0:
+    resolution: {integrity: sha512-jjiwrzydERou4yp9WHiJeVK237B7BUP3/4j6tdycyHag266YVWa/BMNtTOThWJKGku+m+TC2qfaujLYixgcbrQ==}
+    dev: false
 
   /ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
@@ -2602,6 +2661,10 @@ packages:
     dependencies:
       typescript: 5.4.5
     dev: true
+
+  /tslib@2.6.3:
+    resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
+    dev: false
 
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
